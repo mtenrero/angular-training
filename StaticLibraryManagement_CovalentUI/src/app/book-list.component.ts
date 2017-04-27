@@ -4,7 +4,7 @@ import { Book, BookService } from './book.service';
 
 @Component({
   template: `
-    <h2>BOOKS</h2>
+    <h3 class="md-display-2">Books</h3>
     <ul>
       <li *ngFor="let book of books">
         <a [routerLink]="['/book', book.id]">{{book.id}} - {{book.title}}</a>

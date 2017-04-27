@@ -1,7 +1,7 @@
-#### Usage instructions 
+# Usage instructions 
 
-GET     /       ->  list all
-GET     /:id    ->  read one
-POST    /       ->  insert
-PUT     /:id    ->  update
-DELETE  /:id    ->  remove
+`GET     /`       ->  __list all__ \
+`GET     /:id`    ->  __read one__ \
+`PUT     /:id`    ->  __update__ \
+`POST    /`       ->  __insert__ \
+`DELETE  /:id`    ->  __remove__ 

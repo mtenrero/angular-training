@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { Component } from '@angular/core';
 import { Book, BookService } from './book.service';
 
@@ -9,13 +10,17 @@ import { Book, BookService } from './book.service';
         <a [routerLink]="['/book', book.id]">{{book.id}} - {{book.title}}</a>
       </li>
     </ul>
+    <button (click)="newBook()">Add Book</button>
   `
 })
 export class BookListComponent {
 
   books: Book[];
 
-  constructor(service: BookService) {
+  constructor(private router: Router, service: BookService) {
     this.books = service.getBooks();
   }
+
+  newBook() {
+    this.router.navigate(['/book/new']);  }
 }

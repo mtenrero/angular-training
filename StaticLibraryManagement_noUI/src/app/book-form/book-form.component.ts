@@ -17,9 +17,14 @@ export class BookFormComponent implements OnInit {
 
   constructor(private router: Router, activatedRoute: ActivatedRoute, service: BookService) {
     const id = activatedRoute.snapshot.params['id'];
-    this.book = service.getBook(id);
-    this.description = this.book.description;
-    this.title = this.book.title;
+    if (id) {
+      this.book = service.getBook(id);
+      this.description = this.book.description;
+      this.title = this.book.title;
+    } else {
+      this.book = new Book(service.newIndex(), this.title, this.description);
+    }
+
     this.service = service;
   }
 

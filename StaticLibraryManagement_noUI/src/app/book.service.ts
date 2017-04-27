@@ -1,3 +1,4 @@
+import { element } from 'protractor';
 import { Injectable } from '@angular/core';
 
 export class Book {
@@ -30,8 +31,20 @@ export class BookService {
 
   saveBook(nbook: Book) {
     const index = this.books.findIndex(book => book.id === nbook.id);
+    if (index) {
+      this.books.splice(index, 1);
+      this.books.splice(index, 0, nbook);
+    } else {
+      this.books.push(nbook);
+    }
+  }
 
-    this.books.splice(index, 1);
-    this.books.splice(index, 0, nbook);
+  newIndex() {
+    let lastIndex = 0;
+
+    for (const book of this.books) {
+      lastIndex = book.id;
+    }
+    return lastIndex + 1;
   }
 }

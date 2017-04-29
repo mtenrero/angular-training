@@ -1,0 +1,11 @@
+<section class="form-block">
+    <p>Id: {{book?.id}}</p>
+    <p>Title: <input type="text" [(ngModel)]="title"></p>
+    <p>Description: <textarea type="text" [(ngModel)]="description"></textarea></p>
+
+    <div class="btn-group btn-primary">
+        <button class="btn" (click)="back()">Back</button>
+        <button class="btn btn-success" (click)="save()">Save</button>
+    </div>
+    
+</section>

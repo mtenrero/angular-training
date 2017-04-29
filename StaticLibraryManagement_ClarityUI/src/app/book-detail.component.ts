@@ -3,18 +3,7 @@ import { Router, ActivatedRoute } from '@angular/router';
 import { Book, BookService } from './book.service';
 
 @Component({
-  template: `
-  <h2>{{book.title}}</h2>
-  <div>
-    <label>Id: </label>{{book.id}}
-  </div>
-  <div>
-    <label>Description: </label>{{book.description}}
-  </div>
-  <p>
-    <button (click)="gotoBooks()">Back</button>
-    <button (click)="edit()">Edit</button>
-  </p>`
+  templateUrl: './book-detail.component.html'
 })
 export class BookDetailComponent {
 

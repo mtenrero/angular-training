@@ -1,13 +1,9 @@
-import { CovalentCoreModule, CovalentLayoutModule } from '@covalent/core';
-import { CovalentDynamicFormsModule } from '@covalent/dynamic-forms';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
-import { MdButtonModule } from '@angular/material';
-
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 import { HttpModule, JsonpModule } from '@angular/http';
+
+import { ClarityModule } from 'clarity-angular';
 
 import { AppComponent } from './app.component';
 import { BookListComponent } from './book-list.component';
@@ -23,11 +19,7 @@ import { BookFormComponent } from './book-form/book-form.component';
    HttpModule,
    JsonpModule,
    routing,
-   CovalentCoreModule,
-   CovalentDynamicFormsModule,
-   BrowserAnimationsModule,
-   MdButtonModule,
-   CovalentLayoutModule
+   ClarityModule.forRoot()
   ],
   bootstrap: [AppComponent],
   providers: [BookService]

@@ -1,0 +1,7 @@
+<button type="submit" class="btn btn-success-outline" (click)="newBook()">Add Book</button>
+    <h3 class="md-display-2">Books</h3>
+    <ul>
+      <li *ngFor="let book of books">
+        <a [routerLink]="['/book/', book.id]">{{book.id}} - {{book.title}}</a>
+      </li>
+    </ul>

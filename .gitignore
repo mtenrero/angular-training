@@ -8,3 +8,5 @@ Node_LibraryManagementBackend/data/db\.dat
 Node_LibraryManagementBackendDB/node_modules/
 
 Node_LibraryManagementBackendMem/node_modules/
+
+\.vscode/

@@ -25,7 +25,7 @@ function getBooks() {
 }
 
 function getBook(id) {
-	return books.find(book => book.id === +id);
+	return books.find(book => book.id == +id);
 }
 
 function saveBook(book) {
@@ -65,6 +65,7 @@ function updateBook(id, title, description) {
 
 module.exports = Book;
 module.exports.getBooks = getBooks;
+module.exports.getBook = getBook;
 module.exports.saveBook = saveBook;
 module.exports.deleteBook = deleteBook;
 module.exports.updateBook = updateBook;

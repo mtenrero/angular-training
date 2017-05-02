@@ -1,6 +1,11 @@
-# Ejem1
+# Library Management Frontend
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.0.
+
+## Fully functional example deployment
+
+* **Backend:** go to desired backend directory and run: `npm install && node bin/www``. It will listen in http://localhost:3000/books
+* **Frontend:** Prebuilt version is available in /dist folder (only in Dynamic project). You can deploy it using any static content web serever (Apache, NginX…). The easiest way is using *http-serve* npm module with `http-serve .` launching it within /dist folder. **The backend must be listening in `http://localhost:3000/books`**. 
 
 ## Development server
 

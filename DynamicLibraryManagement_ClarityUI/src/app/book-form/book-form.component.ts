@@ -26,13 +26,41 @@ export class BookFormComponent implements OnInit {
   }
 
   back() {
-    this.router.navigate(['/book', this.id]);
+    if (! this.isNewBook()) {
+      this.goToBooks();
+    } else {
+      this.router.navigate(['/book', this.id]);
+    }
+  }
+
+  goToBooks() {
+    this.router.navigate(['/books']);
+  }
+
+  isNewBook() {
+    return this.id > 0
   }
 
   save() {
+    if (this.isNewBook()) {
+      this.updateBook();
+    } else {
+      this.addBook();
+    }
+  }
+
+  addBook() {
     let book : Book = new Book(this.id, this.title, this.description);
-    this.service.saveBook(book);
-    this.router.navigate(['/books']);
+    this.service.addBook(book).subscribe(
+      book => this.goToBooks()
+    );
+  }
+
+  updateBook() {
+    let book : Book = new Book(this.id, this.title, this.description);
+    this.service.update(book).subscribe(
+      book => this.goToBooks()
+    );
   }
 
   getBookDetails() {

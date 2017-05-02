@@ -24,6 +24,12 @@ export class BookDetailComponent {
     this.router.navigate(['/book/edit', this.id]);
   }
 
+  remove() {
+    this.service.remove(this.id).subscribe(
+      book => this.gotoBooks()
+    );
+  }
+
   getBook(id) {
     this.service.getBook(id).subscribe(
       book => {

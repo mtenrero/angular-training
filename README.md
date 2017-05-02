@@ -16,7 +16,7 @@ Collection of Angular 4 examples
 
 ## Fully functional example deployment
 
-* **Backend:** go to desired backend directory and run: `npm install && node bin/www``. It will listen in http://localhost:3000/books
+* **Backend:** go to desired backend directory and run: `npm install && node bin/www`. It will listen in http://localhost:3000/books
 * **Frontend:** Prebuilt version is available in /dist folder (only in Dynamic project). You can deploy it using any static content web serever (Apache, NginX…). The easiest way is using *http-serve* npm module with `http-serve .` launching it within /dist folder. **The backend must be listening in `http://localhost:3000/books`**. 
 
 ### Detailed info about the projects can be found inside its folders.

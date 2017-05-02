@@ -1,4 +1,7 @@
 # Library Management Frontend
+![](../readmeFiles/index.png)
+![](../readmeFiles/details.png)
+![](../readmeFiles/edit.png)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.0.
 
